@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="weather.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="image/png" href="weather_icon.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <title>Weather App</title>
+</head>
+<body>
+  
+  <main>
+    <div id="weather-img">
+      <img id="img">
+    </div>
+    <div id="weather-details">
+      <h1><span id="degrees"></span></h1>
+      <h1 id= "bar"></h1>
+      <h1 id="city-name"></h1>
+      <p id='description'></p>
+    </div>
+    <div class="slide-out" id="slider">
+      <img src="https://secure.webtoolhub.com/static/resources/icons/set94/e1cd43ea.png" width=48>
+      <br><br>
+      <p><small>wthr - v0.02</small></p>
+      <br/><br/>
+      <h3>Your Location</h3>
+      <br>
+      <input id="input" type="text" placeholder="City, State"><button type="submit" id="searchWeather"><i class="fas fa-search"
+          id="searchWeather"></i></button>
+      <br><br>
+      <span id="isValid"></span>
+      <a href='#' id="close" class="toggle1" h>close</button>
+
+    </div>
+  </main>
+
+  <button id="toggle"><i class="fas fa-cogs"></i></button>
+
+  <script src="script.js"></script>
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyA-C_umaEbyyJugwr3kLxdIAulL-yzcveM",
+    authDomain: "wthr-mobile.firebaseapp.com",
+    projectId: "wthr-mobile",
+    storageBucket: "wthr-mobile.appspot.com",
+    messagingSenderId: "530670548313",
+    appId: "1:530670548313:web:2663109ebfe51ff2454848",
+    measurementId: "G-CWFE10WVYR"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>
